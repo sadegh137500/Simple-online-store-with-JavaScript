@@ -1,0 +1,263 @@
+@font-face {
+    font-family: vazir;
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Vazir-Regular.eot");
+    src: url("fonts/Vazir-Regular.woff") format("woff"), url("fonts/Vazir-Regular.ttf") format("ttf"), url("fonts/Vazir-Regular.woff2") format("woff2");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: vazir;
+    direction: rtl;
+}
+
+.navbar {
+    background-color: white;
+    z-index: 2;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+
+.dropdown-menu li {
+    padding: 5px;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    margin-top: 0px;
+    right: 100%;
+    position: absolute
+}
+
+.dropdown-menu>li>a:hover::after {
+    text-decoration: underline;
+    transform: rotate(90deg);
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link2 {
+    padding-bottom: 15px;
+}
+
+.nav-item {
+    margin-left: 20px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gallery img {
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+p {
+    margin: 0
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image .overlay {
+    position: absolute;
+    bottom: 0;
+    padding-left: 25px;
+    padding-top: 15px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    z-index: 5
+}
+
+.image .overlay::before {
+    content: "";
+    background: #ffff;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: -150px;
+    z-index: -2;
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+.image:hover .overlay {
+    color: black
+}
+
+.image:hover .overlay::before {
+    bottom: 0px;
+}
+
+.popup-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+.popup-image .popup1 {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev-next {
+    text-align: center;
+    position: relative;
+}
+
+.prev-next .popupbtn1 {
+    position: absolute;
+    top: 300px;
+    left: 10px;
+}
+
+.prev-next .popupbtn2 {
+    position: absolute;
+    top: 300px;
+    right: 10px;
+}
+
+.card {
+    border-radius: 20px;
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    transition: transform .3s;
+}
+
+.cost span {
+    color: #fb3531;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.shoe {
+    background-color: #dc3545;
+}
+
+.shoe:hover {
+    opacity: 0.9;
+}
+
+.cursor {
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card.hide {
+    display: none;
+}
+
+.card.show {
+    display: block;
+    animation: show 0.5s ease;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.imageList.hide {
+    display: none;
+}
+
+.imageList.show {
+    display: block;
+    animation: show 0.5s ease;
+}
+
+.previ.disabled,
+.nexti.disabled {
+    border-color: gray;
+    color: gray;
+    pointer-events: none;
+}
+
+.carousel-item {
+    height: 80vh;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+    position: relative;
+}
+
+.text-center .MoveRight {
+    position: absolute;
+    bottom: 181px;
+    right: 10px;
+}
+
+.text-center .MoveLeft {
+    position: absolute;
+    bottom: 181px;
+    left: 10px;
+}
+
+.textdivider {
+    top: -13px;
+    padding: 0 20px;
+}
+
+.combobox {
+    font-size: 18px;
+    font-family: vazir;
+}
